@@ -37,13 +37,12 @@ export default function Home(){
      
       <main className="bg-white px-10 dark:bg-gray-600 md:px-20 lg:px-40 scroll-smooth">
       
-        <section className="min-h-screen">
+         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
            
             <ul className="flex items-center">
               <li><BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode)} className="hover:animate-pulse cursor-pointer text-2xl" />
               </li>
-
               <li><a className=" bg-teal-500 dark:bg-gray-900 text-white px-4 py-2 hover:bg-cyan-800 rounded-md ml-8"href="https://drive.google.com/file/d/1NKWagybUsAIVbrfg2LurdNuNxQ9CkxCT/view?usp=drive_link">Resume</a></li>
             </ul>
           </nav>
