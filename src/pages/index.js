@@ -8,40 +8,50 @@ import Image from "next/image";
 import deved from "../../public/dev-ed-wave.png"
 import consulting from "../../public/consulting.png"
 import code from "../../public/code.png";
-import web1 from "../../public/web1.png";
+// import web1 from "../../public/web1.png";
 import web2 from "../../public/web2.png";
 import web3 from "../../public/web3.png";
 import web4 from "../../public/web4.png";
 import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
 import { useState } from "react";
+import Design from "../components/Design"
+import md from "../../public/MD.png"
+import ProjectsSection from "@/components/ProjectsSection";
+
 
 export default function Home(){
   const [darkMode, setDarkMode] = useState(false);
   return (
+    <div className="bg-cover">
     <div className={darkMode? "dark": ""}>
+    
+      
       <Head>
         <title>Mrityunjay Deepak Portfolio</title>
         <meta name="description"></meta>
         
         
       </Head>
-      <main className="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+    
+     
+      <main className="bg-white px-10 dark:bg-gray-600 md:px-20 lg:px-40 scroll-smooth">
+      
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">Mrityunjay Deepak</h1>
+           
             <ul className="flex items-center">
-              <li><BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode)} className="cursor-pointer text-2xl" />
+              <li><BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode)} className="hover:animate-pulse cursor-pointer text-2xl" />
               </li>
-              <li><a className=" bg-gradient-to-r dark:bg-gray-900 from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"href="https://drive.google.com/file/d/1NKWagybUsAIVbrfg2LurdNuNxQ9CkxCT/view?usp=drive_link">Resume</a></li>
+              <li><a className=" bg-teal-500 dark:bg-gray-900 text-white px-4 py-2 hover:bg-cyan-800 rounded-md ml-8"href="https://drive.google.com/file/d/1NKWagybUsAIVbrfg2LurdNuNxQ9CkxCT/view?usp=drive_link">Resume</a></li>
             </ul>
           </nav>
 
 
-          <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400">Mrityunjay Deepak</h2>
-            <h3 className="text-2xl py-2 dark:text-white">Developer</h3>
-            <p className="text-medium py-5 leading-8 dark:text-gray-200 text-gray-800">Unleash your projects' potential! Elevate with a freelancer ready to innovate. Join me for cutting-edge solutions. Let's amplify success together. Connect now and revolutionize your development journey</p>
+          <div className="text-center p-3">
+            <h1 className="text-8xl  text-teal-600 font-medium dark:text-teal-400">Mrityunjay Deepak</h1>
+            <h2 className="text-5xl py-5 dark:text-white">Developer</h2>
+            <h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Unlocking Your Success: Harnessing Unique Skills, Delivering Simplicity Tailored to You, and Crafting Your Distinctive Path with Precision Structure - Where Your Goals Meet Their Match</h3>
 
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-400">
@@ -63,20 +73,12 @@ export default function Home(){
 
         <section>
           <div>
-            <h3 className="text-3xl py-1 text-center dark:text-white">Services I offer</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">since the beginning of my journey as a freelancing Developer i have
-              done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
+            <h2 className="text-5xl p-6 text-center dark:text-white">As a Freelancing Developer I am Here to</h2>
+            < h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Embark on a Seamless Journey: I meticulously guide you through the entire web development voyage, sculpting your ideas into a digital masterpiece. Your online presence isn't merely a project—it's a collaborative partnership where I'm dedicated to realizing your digital aspirations. Let's turn your vision into a compelling reality, together.
               
-            </p>
+            </h3>
 
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including
-              programming and teaching.
-            </p>
+           
           </div>
 
           <div className="flex justify-between py-1 px-3  ">
@@ -114,15 +116,16 @@ export default function Home(){
 
         <section className="py-10   text-center ">
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Portfolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <ProjectsSection />
+            {/* <h3 className="text-3xl py-1 dark:text-white ">Portfolio</h3>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200 ">
             Welcome to my portfolio! As a dedicated web developer, I craft dynamic and user-centric websites. Explore the projects below to witness my skills in action. From sleek designs to robust functionality, each project showcases my commitment to excellence. Let's bring your digital vision to life together.
             </p>
           </div>
           <div>
             <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 transition duration-300 ease-in-out hover:scale-110 blur-sm hover:blur-none">
              <Link href="https://article-ai.netlify.app/" ><Image
                 className="rounded-lg object-cover"
                 width={100}
@@ -132,19 +135,19 @@ export default function Home(){
                 
               /></Link> 
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 transition duration-300 ease-in-out hover:scale-110 blur-sm hover:blur-none">
              <Link href="https://snake-game-mrityunjay.netlify.app/">
               <Image
                 className="rounded-lg object-cover"
                 width={60}
                 height={60}
                 layout="responsive"
-                src={web1}
+                // src={web1}
               
               />
              </Link> 
             </div>
-          <div className="basis-1/3 flex-1">
+          <div className="basis-1/3 flex-1 transition duration-300 ease-in-out hover:scale-110 blur-sm hover:blur-none">
                 <Link href="https://github.com/Mrityunjaydeepak/Dukaan-The-Store"><Image
                 className="rounded-lg object-cover"
                 width={100}
@@ -153,7 +156,7 @@ export default function Home(){
                 src={web3}
               /></Link>
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 transition duration-300 ease-in-out hover:scale-110 blur-sm hover:blur-none">
               <Link href="https://classy-haupia-805276.netlify.app/"> <Image
                 className="rounded-lg object-cover"
                 width={100}
@@ -170,10 +173,12 @@ export default function Home(){
             </div>
             <div className="basis-1/3 flex-1">
             
-            </div>
+            </div> */}
           </div>
         </section>
       </main>
+      <div className="absolute"> <Design /></div>
+    </div>
     </div>
   );
 }
