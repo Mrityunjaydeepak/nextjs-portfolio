@@ -22,7 +22,7 @@ const projectsData = [
     id: 2,
     title: "Snake Game",
     description: "Snake Game Based on The retro version of Snake",
-    image: "https://github.com/Mrityunjaydeepak/nextjs-portfolio/blob/main/public/web1.png?raw=true",
+    image: "https://github.com/Mrityunjaydeepak/nextjs-portfolio/blob/main/public/web1.jpg?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://snake-game-mrityunjay.netlify.app/",
     previewUrl: "https://snake-game-mrityunjay.netlify.app/",
