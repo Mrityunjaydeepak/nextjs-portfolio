@@ -34,7 +34,7 @@ const projectsData = [
     image: "https://github.com/Mrityunjaydeepak/nextjs-portfolio/blob/main/public/web3.png?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Mrityunjaydeepak/Dukaan-The-Store",
-    previewUrl: "https://github.com/Mrityunjaydeepak/Dukaan-The-Store",
+    previewUrl: "https://dukaan-the-store.vercel.app/home",
   },
   {
     id: 4,
@@ -86,7 +86,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-5xl p-6 text-center dark:text-white">
-        My Projects
+        Each Project is a unique piece of development!
       </h2>
       <div className="text-black dark:text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag

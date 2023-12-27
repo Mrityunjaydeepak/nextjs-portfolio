@@ -16,11 +16,15 @@ import code from "../../public/code.png";
 // import web6 from "../../public/web6.png";
 import { useState } from "react";
 import Design from "../components/Design"
+import SlidingCard from '../components/SlidingCard';
 import md from "../../public/MD.png"
 import ProjectsSection from "@/components/ProjectsSection";
+import { TiStarFullOutline } from "react-icons/ti";
+import { CiBookmarkCheck } from "react-icons/ci";
 
 
 export default function Home(){
+  
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="bg-cover">
@@ -39,11 +43,11 @@ export default function Home(){
       
          <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-           
+           <span> <Image src={md} className="size-20 -rotate-12"></Image> </span>
             <ul className="flex items-center">
               <li><BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode)} className="hover:animate-pulse cursor-pointer text-2xl" />
               </li>
-              <li><a className=" bg-teal-500 dark:bg-gray-900 text-white px-4 py-2 hover:bg-cyan-800 rounded-md ml-8"href="https://drive.google.com/file/d/1NKWagybUsAIVbrfg2LurdNuNxQ9CkxCT/view?usp=drive_link">Resume</a></li>
+              <li><a className=" bg-teal-500 dark:bg-gray-900 text-white px-4 py-2 hover:bg-cyan-800 rounded-md ml-8"href="https://drive.google.com/file/d/1B06JhE3jHOJwMo6tKPGbu0LThKSaQVvD/view?usp=sharing">Resume</a></li>
             </ul>
           </nav>
 
@@ -51,7 +55,7 @@ export default function Home(){
           <div className="text-center p-3">
             <h1 className="text-8xl  text-teal-600 font-medium dark:text-teal-400">Mrityunjay Deepak</h1>
             <h2 className="text-5xl py-5 dark:text-white">Developer</h2>
-            <h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Unlocking Your Success: Harnessing Unique Skills, Delivering Simplicity Tailored to You, and Crafting Your Distinctive Path with Precision Structure - Where Your Goals Meet Their Match</h3>
+            <h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Your web pal for success. Ideas to shine, guide with care. On-time launch, no fuss. Let's craft—your vision, my skill!</h3>
 
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-400">
@@ -80,35 +84,43 @@ export default function Home(){
 
            
           </div>
-
+          
           <div className="flex justify-between py-1 px-3  ">
           <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 justify-center mr-6">
-             <div className=" mx-auto"><Image  src={code} width={100} height={100} /></div> 
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Code your dream project
+             
+              
+              <h3 className="py-2 text-2xl font-medium">
+              Ready for business success? Let's discuss your project!
               </h3>
-              <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
-              </p>
-              <h4 className="py-4 text-teal-600">Languages I Code in</h4>
-              <div className="text-gray-800">
-              <p className=" font-bold">React js</p></div>
-              <div className="py-1 flex justify-center align-middle"><p className="text-gray-800 py-1 font-bold">Next js</p></div>
-              <div className="text-gray-800 py-1 flex justify-center align-middle font-bold">Express js</div>
-              <div className="text-gray-800 py-1 flex justify-center align-middle font-bold">HTML, CSS, JAVASCRIPT</div>
+              <h4 className="py-4 text-xl text- text-teal-600">Languages I Code in</h4>
+              <div className="text-gray-800 grid md:grid-cols-2 gap-2s md:gap-10">
+              <p className=" font-bold  justify-items-center">HTML | CSS
+              <span className="flex justify-between px-9"><TiStarFullOutline className="size-10 text-orange-300 " /> <TiStarFullOutline className="size-10 text-orange-300 " /> <TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300" /><TiStarFullOutline className="size-10 text-orange-300" /> </span></p>
+              <p className=" font-bold">React js
+              <span className="flex justify-between px-9"><TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300 " /> <TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300" /> </span></p>
+              <p className=" font-bold">Next js
+              <span className="flex justify-between px-9"><TiStarFullOutline className="size-10 text-orange-300 " /> <TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300" /><TiStarFullOutline className="size-10 text-orange-300" /> </span></p>
+              <p className=" font-bold">Express js
+              <span className="flex justify-between px-9"><TiStarFullOutline className="size-10 text-orange-300" /> <TiStarFullOutline className="size-10 text-orange-300 " /><TiStarFullOutline className="size-10 text-orange-300" /><TiStarFullOutline className="size-10 text-orange-300" /> </span></p>
+              
+              </div>
+              
               
               </div>
           
 
           <div className="text-center  shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={consulting} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
+              
+              <h3 className=" font-medium pt-8 pb-2 text-2xl ">Transform your business with strategic consulting</h3>
               <p className="py-2">
-              Empowering businesses through strategic consulting services. Elevate your vision with tailored solutions, expert advice, and collaborative insights. Let's navigate your success together
+              
               </p>
-              <h4 className="py-4 text-teal-600">Consultations I have  provided to </h4>
-              <p className="text-gray-800 py-1 font-bold">startups</p>
+              <h4 className=" text-xl text-teal-600">Consultations I provide </h4>
+              <p className="text-gray-800  flex justify-center font-bold text-center"> <CiBookmarkCheck className="size-10" />Website Assessment and Recommendations</p>
+              <p className="text-gray-800 flex justify-center font-bold"> <CiBookmarkCheck className="size-10" />Responsive Design Consultation</p>
+              <p className="text-gray-800 flex justify-center font-bold"> <CiBookmarkCheck className="size-10" />Technology Stack Guidance</p>
+              <p className="text-gray-800 flex justify-center font-bold"> <CiBookmarkCheck className="size-10"/>SEO Analysis</p>
+              
               
             </div>
             </div>
