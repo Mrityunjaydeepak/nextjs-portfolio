@@ -22,7 +22,7 @@ const projectsData = [
     id: 2,
     title: "Expense Tracker",
     description: "Master Your Finances: Unleashing the Power of a Full-stack Expense Tracker",
-    image: "https://github.com/Mrityunjaydeepak/nextjs-portfolio/blob/main/public/web1.jpg?raw=true",
+    image: "https://github.com/Mrityunjaydeepak/nextjs-portfolio/blob/main/public/web1.png?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Mrityunjaydeepak/FullStack_expense_tracker",
     previewUrl: "https://full-stack-expense-tracker-kappa.vercel.app//",
