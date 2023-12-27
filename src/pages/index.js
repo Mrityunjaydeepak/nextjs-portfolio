@@ -16,8 +16,8 @@ import code from "../../public/code.png";
 // import web6 from "../../public/web6.png";
 import { useState } from "react";
 import Design from "../components/Design"
-import SlidingCard from '../components/SlidingCard';
-import md from "../../public/MD.png"
+import DesignDark from "../components/DesignDark"
+import { LuCode2 } from "react-icons/lu";
 import ProjectsSection from "@/components/ProjectsSection";
 import { TiStarFullOutline } from "react-icons/ti";
 import { CiBookmarkCheck } from "react-icons/ci";
@@ -43,7 +43,7 @@ export default function Home(){
       
          <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-           <span> <Image src={md} className="size-20 -rotate-12"></Image> </span>
+           <LuCode2 className="text-2xl text-cyan-300 -rotate-35" />
             <ul className="flex items-center">
               <li><BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode)} className="hover:animate-pulse cursor-pointer text-2xl" />
               </li>
@@ -55,7 +55,7 @@ export default function Home(){
           <div className="text-center p-3">
             <h1 className="text-8xl  text-teal-600 font-medium dark:text-teal-400">Mrityunjay Deepak</h1>
             <h2 className="text-5xl py-5 dark:text-white">Developer</h2>
-            <h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Your web pal for success. Ideas to shine, guide with care. On-time launch, no fuss. Let's craft—your vision, my skill!</h3>
+            <h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Your web pal for success. Ideas to shine, guide with care. On-time launch, no fuss. Let's craft: your vision, my skill!</h3>
 
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-400">
@@ -78,8 +78,8 @@ export default function Home(){
         <section>
           <div>
             <h2 className="text-5xl p-6 text-center dark:text-white">As a Freelancing Developer I am Here to</h2>
-            < h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">Embark on a Seamless Journey: I meticulously guide you through the entire web development voyage, sculpting your ideas into a digital masterpiece. Your online presence isn't merely a project—it's a collaborative partnership where I'm dedicated to realizing your digital aspirations. Let's turn your vision into a compelling reality, together.
-              
+            < h3 className="text-2xl py-4 leading-8 dark:text-gray-200 text-gray-800">
+            Start a clean web journey. Your vision, our core. Teamwork, not tasks. Shape online: clear, potent, swift. Together, forge success.
             </h3>
 
            
@@ -186,10 +186,11 @@ export default function Home(){
             <div className="basis-1/3 flex-1">
             
             </div> */}
+            
           </div>
         </section>
       </main>
-      <div className="absolute"> <Design /></div>
+      <div>{darkMode? (<DesignDark />):(<Design />)} </div>
     </div>
     </div>
   );
